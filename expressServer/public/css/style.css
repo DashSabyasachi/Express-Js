@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0; 
+}
+.home{
+    background: linear-gradient(pink,blue);
+    background-repeat:no-repeat;
+    height: calc(100vh - 80px)
+}
+.about{
+    background: linear-gradient(green,white);
+    background-repeat:no-repeat;
+    height: calc(100vh - 80px) 
+}
+
+.login{
+    background: linear-gradient(rgb(93, 92, 187),rgb(192, 38, 179));
+    background-repeat:no-repeat;
+    height: calc(100vh - 80px) 
+}
+h1{
+    background-color: darkcyan;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid rgb(53, 216, 208);
+    border-radius: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+#logo{
+    height: 50px;
+    width:50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px white;
+}
+.nav-bar{
+    padding: 0 20px;
+    height: 80px;
+    background-color: rgb(28, 147, 190);
+    display: flex;
+    color: white;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+.btns{
+    width: 500px;
+    display: flex;
+    color: white;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+#btn{
+    height: 30px;
+    width: 70px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(40, 153, 108);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0px 0px 10px white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+section{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items: center;
+}
+form{
+    border: 10px double white;
+    border-radius: 20px;
+    padding: 50px;
+}
+img{
+    height: 400px;
+    width: 300px;
+}
+
+
+
+/* ....................login..................... */
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#backbtn{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}

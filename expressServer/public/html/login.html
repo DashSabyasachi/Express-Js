@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+        <style>
+       a{
+            text-decoration: none;
+            color: black;
+            font-family:'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div ><img src="https://cdn.dribbble.com/userupload/11553799/file/original-72cb6d7026c79a481f2e6403592e48a2.png?resize=400x300" alt="loading" id="logo"></div>
+        <div class="btns">
+        <div><a href="../home.html" >HOME</a></div>
+        <div><a href="./about.html">ABOUT</a></div>
+        <a id="btn" href="./login.html">LOGIN</a>
+        </div>
+    </nav>
+<section class="login">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form class="login-form" id="form">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Login</button>
+            <button type="submit"><a href="../home.html" id="backbtn">BACK</a></button>
+        </div>
+    </form>
+</div>
+</section>
+
+<script>
+  let form = document.getElementById('form')
+  let userDetails = {}
+  form.addEventListener("input", (event) => {
+      event.preventDefault()
+      let value = event.target.value
+      let name = event.target.name
+      userDetails[name] = value
+  })
+  form.addEventListener("submit", (event) => {
+      event.preventDefault()
+      let { username, password } = userDetails;
+      console.log(userDetails);  
+      if(username && password){
+        fetch("/newLogger",{
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(userDetails)
+        })
+        .then(data=>data.json()).then(data=>console.log(data))
+        .catch(err=>console.log(err))
+        form.reset()
+      }else{
+        alert("All fields are necessary")
+      }
+  })
+
+</script>
+</body>
+</html>
